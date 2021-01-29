@@ -1,16 +1,12 @@
-# This is a sample Python script.
-
-# Press Shift+F10 to execute it or replace it with your code.
-# Press Double Shift to search everywhere for classes, files, tool windows, actions, and settings.
-
-
-def print_hi(name):
-    # Use a breakpoint in the code line below to debug your script.
-    print(f'Hi, {name}')  # Press Ctrl+F8 to toggle the breakpoint.
+# define the function to receive the array/list to be checked here
+def receiveArray(L):
+    n = len(L)  # set a variable and assign the length of the array
+    sum_of_actual_array = (n + 1) * (n + 2) / 2  # get the summation of all the elements that should be in the array
+    sum_of_passed_array = sum(L)
+    return sum_of_actual_array - sum_of_passed_array
 
 
-# Press the green button in the gutter to run the script.
+# Run the program here
 if __name__ == '__main__':
-    print_hi('PyCharm')
-
-# See PyCharm help at https://www.jetbrains.com/help/pycharm/
+    missing_value = receiveArray([2, 3, 1, 5])  # call the function to be executed
+    print(missing_value)
